@@ -1,0 +1,183 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+OrionLib:MakeNotification({
+	Name = "Welcome!",
+	Content = "You Are Currently Using LSGOP Scripts!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Window = OrionLib:MakeWindow({Name = "My Restaurant Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "first"})
+
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = MainTab:AddSection({
+	Name = "Main"
+})
+
+MainTab:AddButton({
+	Name = "RestaurantBooster",
+	Callback = function()
+      		print("Activated PIPELINE SPOOF")
+          loadstring(game:HttpGet("https://rawscripts.net/raw/My-Restaurant!-Fast-Autofarm-4610"))()
+          OrionLib:MakeNotification({
+        	 Name = "Notification!",
+	         Content = "Restaurant Is Now ENHANCED",
+	         Image = "rbxassetid://4483345998",
+	         Time = 5
+          })
+  	end    
+})
+
+local TeleportTab = Window:MakeTab({
+  	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TeleportTab:AddSection({
+	Name = "Teleports"
+})
+
+TeleportTab:AddButton({
+	Name = "TP To Event",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-402, 227, 847)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "TP To Shop",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-339, 227, 1025)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "TP To 1st Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-216, 227, 959)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "TP To 2nd Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-194, 227, 847)
+  	end    
+  })
+
+TeleportTab:AddButton({
+	Name = "TP To 3rd Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-205, 227, 734)
+  	end    
+  })
+
+TeleportTab:AddButton({
+	Name = "TP To 4th Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-252, 227, 672)
+  	end    
+  })
+
+TeleportTab:AddButton({
+	Name = "TP To 5th Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-351, 227, 645)
+  	end    
+  })
+
+TeleportTab:AddButton({
+	Name = "TP To 6th Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-451, 227, 646)
+  	end    
+  })
+
+TeleportTab:AddButton({
+	Name = "TP To 7th Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-550, 227, 671)
+  	end    
+  })
+
+TeleportTab:AddButton({
+	Name = "TP To 8th Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-580, 227, 735)
+  	end    
+  })
+
+TeleportTab:AddButton({
+	Name = "TP To 9th Restaurant",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-591, 227, 848)
+  	end    
+  })
+
+local OTTab = Window:MakeTab({
+  	Name = "Others",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = OTTab:AddSection({
+	Name = "Others"
+})
+
+OTTab:AddButton({
+	Name = "FPS Unlock",
+	Callback = function()
+      		local UserInputService = game:GetService("UserInputService")
+          local RunService = game:GetService("RunService")
+
+          local WindowFocusReleasedFunction = function()
+        	RunService:Set3dRenderingEnabled(false)
+        	setfpscap(10)
+         	return
+          end
+
+          local WindowFocusedFunction = function()
+	        RunService:Set3dRenderingEnabled(true)
+	        setfpscap(360)
+        	return
+          end
+
+          local Initialize = function()
+	        UserInputService.WindowFocusReleased:Connect(WindowFocusReleasedFunction)
+         	UserInputService.WindowFocused:Connect(WindowFocusedFunction)
+        	return
+          end
+          Initialize()
+  end    
+  })
+
+local CTTab = Window:MakeTab({
+  	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = CTTab:AddSection({
+	Name = "Credits To LasagnaGG !CHECK HIS YT!"
+})
+
+local Section = CTTab:AddSection({
+	Name = "More Functions Will Be Added Soon"
+})
+
+local amount=30
+for i=1,amount do
+OrionLib:MakeNotification({
+	Name = "Notification!",
+	Content = "Subscribe To LasagnaGG For Daily Updates",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+wait(30)
+end
