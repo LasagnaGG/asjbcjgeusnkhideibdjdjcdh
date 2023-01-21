@@ -171,7 +171,7 @@ local Section = CTTab:AddSection({
 	Name = "More Functions Will Be Added Soon"
 })
 
-local amount=30
+local amount=9999
 for i=1,amount do
 OrionLib:MakeNotification({
 	Name = "Notification!",
