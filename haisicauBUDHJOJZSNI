@@ -23,7 +23,7 @@ MainTab:AddToggle({
 	Name = "Autofarm V1",
 	Default = false,
   Save = true,
-  Flag = autoFarma,
+  Flag = "autoFarma",
 	Callback = function(val)
   getgenv().autoFarma = val
   
