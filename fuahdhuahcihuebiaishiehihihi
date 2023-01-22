@@ -19,10 +19,10 @@ local Section = MainTab:AddSection({
 	Name = "Autofarm"
 })
 
-MainTab:AddToggle({
+Tab:AddToggle({
 	Name = "This is a toggle!",
 	Default = false,
 	Callback = function(Value)
-        
+		print(Value)
 	end    
 })
