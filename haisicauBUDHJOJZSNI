@@ -1,5 +1,3 @@
-local ascp = false
-
 local function autoFarm()
   if autoFarma == true
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 90, 1363)
