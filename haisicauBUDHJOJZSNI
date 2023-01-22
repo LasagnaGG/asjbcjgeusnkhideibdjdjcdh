@@ -31,7 +31,7 @@ MainTab:AddToggle({
       if autoFarma == true then
         print("on")
       elseif autoFarma == false then
-        break
+        print("off")
       end
     end
    end
