@@ -1,3 +1,30 @@
+local ascp = false
+
+local function autoFarm()
+  if autoFarma == true
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 90, 1363)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 71, 2146)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 42, 2912)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 53, 3680)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 71, 4449)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 100, 5221)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 56, 5995)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 46, 6757)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177, 49, 7527)
+  task.wait(0.2)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160, 84, 8291)
+  end
+end
+  
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
