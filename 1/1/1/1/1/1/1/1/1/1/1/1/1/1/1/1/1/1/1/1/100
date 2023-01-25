@@ -1,0 +1,35 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+OrionLib:MakeNotification({
+	Name = "Welcome!",
+	Content = "You Are Currently Using LSGOP Scripts!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Window = OrionLib:MakeWindow({Name = "Build A Boat Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "babftlsgop"})
+
+local MainTab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = MainTab:AddSection({
+	Name = "Autofarm"
+})
+
+MainTab:AddToggle({
+	Name = "Autofarm Gold",
+  Flag = "autofarmGold",
+	Default = false,
+	Callback = function(Val)
+  gengenv().autofarmGold = val
+    if autofarmGold == true then
+      afg = "1"
+      autofarmGold()
+    elseif autofarmGold == false then
+      afg = "0"
+	  end
+	end    
+})
