@@ -7,7 +7,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-local Window = OrionLib:MakeWindow({Name = "My Restaurant Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "first"})
+local Window = OrionLib:MakeWindow({Name = "V1.1 My Restaurant Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "first"})
 
 local MainTab = Window:MakeTab({
 	Name = "Main",
