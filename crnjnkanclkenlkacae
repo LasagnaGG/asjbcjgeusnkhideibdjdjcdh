@@ -166,6 +166,12 @@ OTTab:AddButton({
                  wait(1)
                  vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
                  end)
+		  OrionLib:MakeNotification({
+	          Name = "Activated!",
+	          Content = "Anti-AFK Is Activated",
+	          Image = "rbxassetid://4483345998",
+	          Time = 5
+                  })
   	end    
   })
 
