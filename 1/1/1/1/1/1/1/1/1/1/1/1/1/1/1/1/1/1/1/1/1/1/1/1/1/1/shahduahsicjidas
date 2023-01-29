@@ -18,7 +18,7 @@ local Section = AutoTab:AddSection({
 	Name = "Auto Menu"
 })
 
-Tab:AddButton({
+AutoTab:AddButton({
 	Name = "Restock Shelfs",
 	Callback = function()
       		OrionLib:MakeNotification({
@@ -255,6 +255,14 @@ Tab:AddButton({
 	}
 
 	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+	
+	OrionLib:MakeNotification({
+	Name = "Notificaton!",
+	Content = "Shelfs Are Restocked!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+        })
 
   	end    
 })
+
