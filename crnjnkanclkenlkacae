@@ -182,7 +182,7 @@ local CTTab = Window:MakeTab({
 })
 
 local Section = CTTab:AddSection({
-	Name = "Credits To LasagnaGG !CHECK HIS YT!"
+	Name = "Credits To LasagnaXYZ !CHECK HIS YT!"
 })
 
 local Section = CTTab:AddSection({
@@ -193,7 +193,7 @@ local amount=9999
 for i=1,amount do
 OrionLib:MakeNotification({
 	Name = "Notification!",
-	Content = "Subscribe To LasagnaGG For Daily Updates",
+	Content = "Subscribe To LasagnaXYZ For Updates",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
