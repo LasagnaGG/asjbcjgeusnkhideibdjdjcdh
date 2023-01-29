@@ -267,3 +267,141 @@ AutoTab:AddButton({
   	end    
 })
 
+AutoTab:AddButton({
+	Name = "Restock Vegetables",
+	Callback = function()
+      
+         tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-16, 3, -12)})
+	tween:Play()
+wait(2)
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Carrots",
+		[3] = CFrame.new(-12.811657905578613, 2.4499998092651367, -5.852238655090332) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Carrots",
+		[3] = CFrame.new(-12.811657905578613, 2.4499998092651367, -6.6430816650390625) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Carrots",
+		[3] = CFrame.new(-12.811657905578613, 2.4499998092651367, -7.433924674987793) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Carrots",
+		[3] = CFrame.new(-12.811657905578613, 2.4499998092651367, -8.224767684936523) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Potato",
+		[3] = CFrame.new(-12.100000381469727, 2.4499998092651367, -5.800000190734863) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Potato",
+		[3] = CFrame.new(-11.699999809265137, 2.4499998092651367, -5.800000190734863) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Potato",
+		[3] = CFrame.new(-11.300000190734863, 2.4499998092651367, -5.800000190734863) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Potato",
+		[3] = CFrame.new(-12.100000381469727, 2.4499998092651367, -6.5) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Tomato",
+		[3] = CFrame.new(-13.199999809265137, 2.4499998092651367, -8.899999618530273) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Tomato",
+		[3] = CFrame.new(-12.699999809265137, 2.4499998092651367, -8.899999618530273) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Tomato",
+		[3] = CFrame.new(-12.199999809265137, 2.4499998092651367, -8.899999618530273) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Tomato",
+		[3] = CFrame.new(-11.699999809265137, 2.4499998092651367, -8.899999618530273) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Cucumber",
+		[3] = CFrame.new(-11.699999809265137, 2.4499998092651367, -8.5) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Cucumber",
+		[3] = CFrame.new(-11.699999809265137, 2.4499998092651367, -8.100000381469727) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Cucumber",
+		[3] = CFrame.new(-11.699999809265137, 2.4499998092651367, -7.699999809265137) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Cucumber",
+		[3] = CFrame.new(-11.699999809265137, 2.4499998092651367, -7.300000190734863) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+      
+  	end    
+})
