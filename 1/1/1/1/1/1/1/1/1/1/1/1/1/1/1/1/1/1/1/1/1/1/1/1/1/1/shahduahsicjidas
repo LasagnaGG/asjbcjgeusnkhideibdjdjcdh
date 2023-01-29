@@ -594,14 +594,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
-
-OrionLib:MakeNotification({
-        	OrionLib:MakeNotification({
-        	Name = "Notification!",
-	        Content = "Fridge Are Now Restocked!",
-        	Image = "rbxassetid://4483345998",
-        	Time = 5
-          })
 	  
-  	end    
+end    
 })
