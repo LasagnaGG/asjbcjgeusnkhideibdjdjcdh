@@ -604,17 +604,17 @@ OrionLib:MakeNotification({
 
 local Window = OrionLib:MakeWindow({Name = "V1 Zach Gas Station Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "LsgXYZ2"})
 
-local AutoTab = Window:MakeTab({
-	Name = "Auto",
+local RestockTab = Window:MakeTab({
+	Name = "Restocks",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-local Section = AutoTab:AddSection({
+local Section = RestockTab:AddSection({
 	Name = "AutoMenu"
 })
 
-AutoTab:AddButton({
+RestockTab:AddButton({
 	Name = "Restock Shelfs",
 	Callback = function()
       		OrionLib:MakeNotification({
@@ -862,7 +862,7 @@ AutoTab:AddButton({
   	end    
 })
 
-AutoTab:AddButton({
+RestockTab:AddButton({
 	Name = "Restock Vegetables",
 	Callback = function()
 	
@@ -1015,7 +1015,7 @@ wait(2)
   	end    
 })
 
-AutoTab:AddButton({
+RestockTab:AddButton({
 	Name = "Restock Fridge",
 	Callback = function()
 	
@@ -1201,4 +1201,225 @@ OrionLib:MakeNotification({
 game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
 	  
 end    
+})
+
+RestockTab:AddButton({
+	Name = "Restock Freezer",
+	Callback = function()
+        
+	OrionLib:MakeNotification({
+        	Name = "Notification!",
+	        Content = "Restocking Freezer, This May Take A While",
+        	Image = "rbxassetid://4483345998",
+        	Time = 5
+          })
+	
+		tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-16, 3, -12)})
+	tween:Play()
+	wait(2)
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Homemade Fishfingers",
+		[3] = CFrame.new(-16.100000381469727, 1.6000014543533325, 3) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Homemade Fishfingers",
+		[3] = CFrame.new(-16.100000381469727, 1.8417786359786987, 3) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Homemade Fishfingers",
+		[3] = CFrame.new(-16.100000381469727, 2.0835559368133545, 3) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Homemade Fishfingers",
+		[3] = CFrame.new(-16.100000381469727, 2.325333833694458, 3) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Veggies",
+		[3] = CFrame.new(-16.700000762939453, 1.600001573562622, 3.200000047683716) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Veggies",
+		[3] = CFrame.new(-17, 1.600001573562622, 3.200000047683716) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Veggies",
+		[3] = CFrame.new(-17.299999237060547, 1.600001573562622, 3.200000047683716) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Veggies",
+		[3] = CFrame.new(-16.700000762939453, 1.600001573562622, 2.4000000953674316) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Sausages",
+		[3] = CFrame.new(-15.300000190734863, 1.6000014543533325, 3.4000000953674316) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Sausages",
+		[3] = CFrame.new(-15.300000190734863, 1.6000014543533325, 2.700000047683716) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Sausages",
+		[3] = CFrame.new(-15.300000190734863, 1.7677210569381714, 2.700000047683716) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Frozen Sausages",
+		[3] = CFrame.new(-15.300000190734863, 1.7569913864135742, 3.4000000953674316) * CFrame.Angles(-0, 0, -0)
+	}
+	
+	OrionLib:MakeNotification({
+        	OrionLib:MakeNotification({
+        	Name = "Notification!",
+	        Content = "Freezer Are Now Restocked!",
+        	Image = "rbxassetid://4483345998",
+        	Time = 5
+          })
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+	
+  	end    
+})
+
+RestockTab:AddButton({
+	Name = "Restock Fast Foods",
+	Callback = function()
+        
+	OrionLib:MakeNotification({
+        	Name = "Notification!",
+	        Content = "Restocking FastFoods, This May Take A While",
+        	Image = "rbxassetid://4483345998",
+        	Time = 5
+          })
+	  
+	  	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-16, 3, -12)})
+	tween:Play()
+wait(2)
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Instant Meal",
+		[3] = CFrame.new(-13.199999809265137, 3.5000014305114746, -27.5) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Instant Meal",
+		[3] = CFrame.new(-11.399999618530273, 3.5000014305114746, -27.5) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Hamburger",
+		[3] = CFrame.new(-11.826000213623047, 1.9000043869018555, -27.86400032043457) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Hamburger",
+		[3] = CFrame.new(-11.826000213623047, 1.9000043869018555, -27.053998947143555) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Hamburger",
+		[3] = CFrame.new(-11.015999794006348, 1.9000043869018555, -27.70199966430664) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Hamburger",
+		[3] = CFrame.new(-11.015999794006348, 1.9000043869018555, -26.892000198364258) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Hotdog",
+		[3] = CFrame.new(-13.549687385559082, 1.9000043869018555, -28.42152416700925) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Hotdog",
+		[3] = CFrame.new(-13.549687385559082, 1.9000043869018555, -27.402727127075195) * CFrame.Angles(-0, 0, -0)
+	}
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+
+	local args = {
+		[1] = "PlaceProduct",
+		[2] = "Hotdog",
+		[3] = CFrame.new(-13.549687385559082, 1.9000043869018555, -26.897140502929688) * CFrame.Angles(-0, 0, -0)
+	}
+	
+	OrionLib:MakeNotification({
+        	OrionLib:MakeNotification({
+        	Name = "Notification!",
+	        Content = "FastFoods Are Now Restocked!",
+        	Image = "rbxassetid://4483345998",
+        	Time = 5
+          })
+
+	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
+	  
+  	end    
 })
