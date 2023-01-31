@@ -593,14 +593,6 @@ local args = {
     [3] = CFrame.new(-28.380001068115234, 4.63234281539917, -2.9040000438690186) * CFrame.Angles(-0, 0, -0)
 }
 
-OrionLib:MakeNotification({
-        	OrionLib:MakeNotification({
-        	Name = "Notification!",
-	        Content = "Fridge Are Now Restocked!",
-        	Image = "rbxassetid://4483345998",
-        	Time = 5
-          })
-
 game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
 
 end
