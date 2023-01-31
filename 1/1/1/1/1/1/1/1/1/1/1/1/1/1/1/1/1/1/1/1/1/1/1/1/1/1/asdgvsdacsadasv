@@ -707,14 +707,6 @@ RestockTab:AddButton({
 		[2] = "Frozen Sausages",
 		[3] = CFrame.new(-15.300000190734863, 1.7569913864135742, 3.4000000953674316) * CFrame.Angles(-0, 0, -0)
 	}
-	
-	OrionLib:MakeNotification({
-        	OrionLib:MakeNotification({
-        	Name = "Notification!",
-	        Content = "Freezer Are Now Restocked!",
-        	Image = "rbxassetid://4483345998",
-        	Time = 5
-          })
 
 	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
 	
@@ -807,13 +799,6 @@ wait(2)
 		[3] = CFrame.new(-13.549687385559082, 1.9000043869018555, -26.897140502929688) * CFrame.Angles(-0, 0, -0)
 	}
 	
-	OrionLib:MakeNotification({
-        	OrionLib:MakeNotification({
-        	Name = "Notification!",
-	        Content = "FastFoods Are Now Restocked!",
-        	Image = "rbxassetid://4483345998",
-        	Time = 5
-          })
 
 	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
 	  
