@@ -257,13 +257,6 @@ AutoTab:AddButton({
 
 	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
 	
-	OrionLib:MakeNotification({
-	Name = "Notificaton!",
-	Content = "Shelfs Are Now Restocked!",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-        })
-
   	end    
 })
 
@@ -409,13 +402,6 @@ wait(2)
 	}
 
 	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
-	
-	OrionLib:MakeNotification({
-        	Name = "Notification!",
-	        Content = "Vegetables Are Now Restocked!",
-        	Image = "rbxassetid://4483345998",
-        	Time = 5
-          })
       
   	end    
 })
@@ -602,13 +588,15 @@ end
 RestockTab:AddButton({
 	Name = "Restock Freezer",
 	Callback = function()
+      		
 	OrionLib:MakeNotification({
         	Name = "Notification!",
 	        Content = "Restocking Freezer, This May Take A While",
         	Image = "rbxassetid://4483345998",
         	Time = 5
           })
-		tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+		
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-16, 3, -12)})
 	tween:Play()
 	wait(2)
@@ -707,22 +695,22 @@ RestockTab:AddButton({
 	}
 
 	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
-	
+		
   	end    
 })
 
 RestockTab:AddButton({
-	Name = "Restock Fast Foods",
+	Name = "Restock FastFoods",
 	Callback = function()
-        
+
 	OrionLib:MakeNotification({
         	Name = "Notification!",
 	        Content = "Restocking FastFoods, This May Take A While",
         	Image = "rbxassetid://4483345998",
         	Time = 5
           })
-	  
-	  	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-16, 3, -12)})
 	tween:Play()
 wait(2)
@@ -796,9 +784,8 @@ wait(2)
 		[2] = "Hotdog",
 		[3] = CFrame.new(-13.549687385559082, 1.9000043869018555, -26.897140502929688) * CFrame.Angles(-0, 0, -0)
 	}
-	
 
 	game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
-	  
+
   	end    
 })
