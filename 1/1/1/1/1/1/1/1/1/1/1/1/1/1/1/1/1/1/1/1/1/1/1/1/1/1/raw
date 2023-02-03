@@ -585,9 +585,17 @@ game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))
 end
 })
 
-RestockTab:AddButton({
+AutoTab:AddButton({
 	Name = "Restock Freezer",
 	Callback = function()
+	
+        OrionLib:MakeNotification({
+        	Name = "Notification!",
+	        Content = "Restocking Freezer, This May Take A While",
+        	Image = "rbxassetid://4483345998",
+        	Time = 5
+        })
+	
 	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-16, 3, -12)})
 	tween:Play()
@@ -689,7 +697,7 @@ RestockTab:AddButton({
   	end    
 })
 
-RestockTab:AddButton({
+AutoTab:AddButton({
 	Name = "Restock FastFoods",
 	Callback = function()
 
