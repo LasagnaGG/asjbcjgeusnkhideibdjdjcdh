@@ -1,3 +1,18 @@
+local function press(a)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, tostring(a), false, game)
+end
+
+local function cleanFloor()
+    for _, v in next, game:GetService("Workspace"):GetDescendants() do
+        if v.Name == "Clean" and v.Parent.Name == "Spot" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+            task.wait(0.1)
+            press("E")
+            task.wait(2)
+        end
+    end
+end
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
@@ -10,7 +25,7 @@ OrionLib:MakeNotification({
 local Window = OrionLib:MakeWindow({Name = "V1 Zach Gas Station Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "LsgXYZ2"})
 
 local AutoTab = Window:MakeTab({
-	Name = "Auto",
+	Name = "Restock",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -787,3 +802,30 @@ wait(2)
 
   	end    
 })
+
+local FarmTab = Window:MakeTab({
+	Name = "Auto",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+FarmTab:AddToggle(
+    {
+        Name = "Clean Floor",
+        Default = false,
+        Save = true,
+        Flag = "cleanFloor",
+        Callback = function(val)
+            getgenv().floorToggle = val
+
+            while floorToggle do
+                task.wait()
+                if floorToggle == true then
+                    cleanFloor()
+                elseif floorToggle == false then
+                    break
+                end
+            end
+        end
+    }
+)
