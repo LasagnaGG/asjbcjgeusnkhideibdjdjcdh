@@ -50,6 +50,21 @@ local function refuel()
     end
 end
 
+local function RestoreEnergy(MinimumEnergy : IntValue)
+   local PlayerCharacter = GetPlayerCharacter()
+   local PreviousCFrame = PlayerCharacter.HumanoidRootPart.CFrame
+   TravelToCFrame(workspace.Ceilings.Sofa.Seat.CFrame)
+   task.wait(2)
+   while true do
+       if GetPlayerStamina() >= MinimumEnergy then
+           break
+       end
+       task.wait(0.5)
+   end
+   PlayerCharacter.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+   TravelToCFrame(PreviousCFrame)
+end
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
@@ -929,3 +944,28 @@ FarmTab:AddToggle(
         end
     }
 )
+
+local OTTab = Window:MakeTab({
+	Name = "Others",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+OTTab:AddButton(
+    {
+        Name = "Buy 1 BloxBull",
+        Callback = function()
+            local args = {
+                [1] = "BuyBloxBull",
+                [2] = workspace.Vendor_BloxBull_1
+            }
+            game:GetService("ReplicatedStorage").Remote:FireServer(unpack(args))            
+        end
+    }
+)
+
+OTTab:AddButton({
+	Name = "ReGain Energy",
+	Callback = function()
+        RestoreEnergy()
+  	end
