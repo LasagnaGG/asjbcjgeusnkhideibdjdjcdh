@@ -969,3 +969,4 @@ OTTab:AddButton({
 	Callback = function()
         RestoreEnergy()
   	end
+	})
