@@ -7,7 +7,7 @@ local function cleanFloor()
         if v.Name == "Clean" and v.Parent.Name == "Spot" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
             task.wait(0.1)
-            press("Hold")
+            press("E")
             task.wait(2)
         end
     end
@@ -970,3 +970,14 @@ OTTab:AddButton({
         RestoreEnergy()
   	end
 	})
+
+local CTTab = Window:MakeTab({
+	Name = "Others",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+CTTab:AddLabel("Credits TO LasagnaXYZ")
+CTTab:AddLabel("Credits TO SoggyWARE")
+CTTab:AddLabel("V1S Beta")
+CTTab:AddLabel("PC And MOBILE Friendly")
