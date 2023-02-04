@@ -13,6 +13,43 @@ local function cleanFloor()
     end
 end
 
+local function cleanWindows()
+    for _, v in next, game:GetService("Workspace").Windows:GetChildren() do
+        if v.ClassName == "Part" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+            task.wait(0.1)
+            press("E")
+            task.wait(2)
+        end
+    end
+end
+
+local function autoScan()
+    for _, v in next, game:GetService("Workspace").Checkouts:GetDescendants() do
+        if v.ClassName == "Model" and v.Parent.Name == "Items" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.PrimaryPart.CFrame
+            task.wait(0.1)
+            press("E")
+            task.wait(2)
+        end
+    end
+end
+
+local function refuel()
+    for _, v in next, game:GetService("Workspace"):GetChildren() do
+        if string.match(v.Name, "Car") and v.ClassName == "Model" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.PrimaryPart.CFrame
+            if v.Lid.Refuel then
+                press("E")
+                task.wait(2)
+            elseif v.Lid.Finish then
+                press("E")
+                task.wait(2)
+            end
+        end
+    end
+end
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
@@ -823,6 +860,69 @@ FarmTab:AddToggle(
                 if floorToggle == true then
                     cleanFloor()
                 elseif floorToggle == false then
+                    break
+                end
+            end
+        end
+    }
+)
+
+FarmTab:AddToggle(
+    {
+        Name = "Clean Windows",
+        Default = false,
+        Save = true,
+        Flag = "cleanWindows",
+        Callback = function(val)
+            getgenv().windowsToggle = val
+
+            while windowsToggle do
+                if windowsToggle == true then
+                    cleanWindows()
+                    task.wait(2)
+                elseif windowsToggle == false then
+                    break
+                end
+            end
+        end
+    }
+)
+
+FarmTab:AddToggle(
+    {
+        Name = "Scan Available Items",
+        Default = false,
+        Save = true,
+        Flag = "scanItems",
+        Callback = function(val)
+            getgenv().scanToggle = val
+
+            while scanToggle do
+                task.wait()
+                if scanToggle == true then
+                    autoScan()
+                elseif scanToggle == false then
+                    break
+                end
+            end
+        end
+    }
+)
+
+FarmTab:AddToggle(
+    {
+        Name = "Refuel Cars",
+        Default = false,
+        Save = true,
+        Flag = "refuelCars",
+        Callback = function(val)
+            getgenv().refuelToggle = val
+
+            while refuelToggle do
+                task.wait()
+                if refuelToggle == true then
+                    refuel()
+                elseif refuelToggle == false then
                     break
                 end
             end
