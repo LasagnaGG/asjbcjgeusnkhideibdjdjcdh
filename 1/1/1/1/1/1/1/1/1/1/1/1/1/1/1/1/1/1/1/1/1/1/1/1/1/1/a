@@ -7,7 +7,7 @@ local function cleanFloor()
         if v.Name == "Clean" and v.Parent.Name == "Spot" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
             task.wait(0.1)
-            press("E")
+            press("Hold")
             task.wait(2)
         end
     end
