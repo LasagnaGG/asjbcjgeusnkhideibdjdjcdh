@@ -6,7 +6,7 @@ local function cleanFloor()
     for _, v in next, game:GetService("Workspace"):GetDescendants() do
         if v.Name == "Clean" and v.Parent.Name == "Spot" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
-            task.wait(0.1)
+            task.wait(0.2)
             press("E")
             task.wait(2)
         end
@@ -17,7 +17,7 @@ local function cleanWindows()
     for _, v in next, game:GetService("Workspace").Windows:GetChildren() do
         if v.ClassName == "Part" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-            task.wait(0.1)
+            task.wait(0.2)
             press("E")
             task.wait(2)
         end
@@ -28,7 +28,7 @@ local function autoScan()
     for _, v in next, game:GetService("Workspace").Checkouts:GetDescendants() do
         if v.ClassName == "Model" and v.Parent.Name == "Items" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.PrimaryPart.CFrame
-            task.wait(0.1)
+            task.wait(0.2)
             press("E")
             task.wait(2)
         end
@@ -74,7 +74,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-local Window = OrionLib:MakeWindow({Name = "V1 Zach Gas Station Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "LsgXYZ2"})
+local Window = OrionLib:MakeWindow({Name = "ALPHA Zach Gas Station Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "LsgXYZ2"})
 
 local AutoTab = Window:MakeTab({
 	Name = "Restock",
@@ -967,17 +967,17 @@ OTTab:AddButton(
 OTTab:AddButton({
 	Name = "ReGain Energy",
 	Callback = function()
-        RestoreEnergy()
+        restoreEnergy()
   	end
 	})
 
 local CTTab = Window:MakeTab({
-	Name = "Others",
+	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 CTTab:AddLabel("Credits TO LasagnaXYZ")
 CTTab:AddLabel("Credits TO SoggyWARE")
-CTTab:AddLabel("V1S Beta")
+CTTab:AddLabel("V0.1 ALPHA")
 CTTab:AddLabel("PC And MOBILE Friendly")
