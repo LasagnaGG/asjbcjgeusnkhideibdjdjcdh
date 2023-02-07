@@ -74,7 +74,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-local Window = OrionLib:MakeWindow({Name = "ALPHA Zach Gas Station Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "LsgXYZ2"})
+local Window = OrionLib:MakeWindow({Name = "Zach Gas Station Script", HidePremium = false, IntroText = "LSGOP", SaveConfig = true, ConfigFolder = "LsgXYZ2"})
 
 local AutoTab = Window:MakeTab({
 	Name = "Restock",
@@ -979,5 +979,16 @@ local CTTab = Window:MakeTab({
 
 CTTab:AddLabel("Credits TO LasagnaXYZ")
 CTTab:AddLabel("Credits TO SoggyWARE")
-CTTab:AddLabel("V0.1 ALPHA")
+CTTab:AddLabel("SourceCode IS Free JUST DM LasagnaGGALT#6510")
 CTTab:AddLabel("PC And MOBILE Friendly")
+
+local amount=9999
+for i=1,amount do
+OrionLib:MakeNotification({
+	Name = "Notification!",
+	Content = "Subscribe To LasagnaXYZ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+wait(30)
+end
